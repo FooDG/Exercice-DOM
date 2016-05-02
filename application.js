@@ -29,8 +29,12 @@ function runChallenges() {
   email_hint.parentNode.removeChild(email_hint);
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
+  
+  var ths = document.getElementsByTagName("th");
 
-
+  for(var i = 0; i < ths.length; i++) {
+    ths[i].classList.add("blue");
+  }
 
   // Ex 5. Count the number of table body rows there are (team count!)
   var team_count = 0;  // TODO: replace 0, keep the team_count variable.
