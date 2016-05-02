@@ -65,7 +65,9 @@ function runChallenges() {
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
-
+  for(var i = 0; i < ths.length; i++) {
+        ths[i].style.backgroundColor = "#DDF4FF";
+  }
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
