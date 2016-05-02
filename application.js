@@ -37,14 +37,21 @@ function runChallenges() {
   }
 
   // Ex 5. Count the number of table body rows there are (team count!)
-  var team_count = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr').length;  // TODO: replace 0, keep the team_count variable.
-
+  var table = document.getElementsByTagName('tbody')[0];
+  var teams = table.getElementsByTagName('tr');  // TODO: replace 0, keep the team_count variable.
+  var team_count = teams.length;
 
 
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
+  var newrow = table.insertRow(team_count);
+  var cell1 = newrow.insertCell(0);
+  var cell2 = newrow.insertCell(1);
+  var cell3 = newrow.insertCell(2);
 
-
+  cell1.innerHTML = team_count+1;
+  cell2.innerHTML = "The 15th team"
+  cell3.innerHTML = "0"
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
