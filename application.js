@@ -37,7 +37,7 @@ function runChallenges() {
   }
 
   // Ex 5. Count the number of table body rows there are (team count!)
-  var team_count = 0;  // TODO: replace 0, keep the team_count variable.
+  var team_count = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr').length;  // TODO: replace 0, keep the team_count variable.
 
 
 
