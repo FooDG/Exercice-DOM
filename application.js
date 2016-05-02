@@ -12,12 +12,21 @@ function runChallenges() {
 
 
   // Ex 2. Fill the content of the email input with your email
-document.getElementById('email').value = "pe.petiterwan@gmail.com"
+  document.getElementById('email').value = "pe.petiterwan@gmail.com"
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
+  var email_hint = document.getElementById('email-hint')
+  email_hint.innerHTML = "This is my email now"
+  email_hint.style.fontWeight = "bold"
 
+
+  var new_email_hint = document.createElement('strong');
+  new_email_hint.innerHTML = email_hint.innerHTML;
+
+  email_hint.parentNode.insertBefore(new_email_hint, email_hint);
+  email_hint.parentNode.removeChild(email_hint);
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
 
