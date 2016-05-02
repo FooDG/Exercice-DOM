@@ -8,11 +8,11 @@
 function runChallenges() {
 
   // Ex 1. Read the content of the email input
-  var email = document.getElementById('email');  // TODO: replace null, keep the email variable.
+  var email = document.getElementById('email').value;  // TODO: replace null, keep the email variable.
 
 
   // Ex 2. Fill the content of the email input with your email
-
+document.getElementById('email').value = "pe.petiterwan@gmail.com"
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
