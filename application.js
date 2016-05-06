@@ -71,12 +71,15 @@ function runChallenges() {
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
-  document.body.setAttribute("onload","translation()");
   var ul = document.getElementById("results")
-  ul.style.top =  '20px';
+  ul.style.top = '20px';
 
   // Ex 10. Remove the "Email:" label from the DOM
-  
+  var label = document.getElementsByTagName("label");
+  for (i = label.length - 1; i >= 0; i--) {
+        label[i].parentNode.removeChild(label[i]);
+   }
+
   // Checking exercise answers. DO NOT MODIFY BELOW
   assert_equal(email, "dleuliette@gmail.com");
   assert_not_equal(document.getElementById("email").value, "dleuliette@gmail.com");
